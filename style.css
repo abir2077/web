@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:"poppins",sans-serif;
+}
+body{
+    background-color: #cb010d;
+    background: linear-gradient(to right,#E83F49,#D8232E);
+}
+.container{
+    background: #fff;
+    width: 450px;
+    padding:1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow:0 20px 35px black;
+}
+form{
+    margin:0 2rem;
+}
+.form-title{
+    font-size:1.5rem;
+    font-weight:bold;
+    text-align:center;
+    padding:1.3rem;
+    margin-bottom:0.4rem;
+}
+input{
+    color:black;
+    width:100%;
+    background-color:transparent;
+    border:none;
+    border-bottom:1px solid #700000;
+    padding-left:1.5rem;
+    font-size:15px;
+}  
+.input-group{
+    padding:1%;
+    position:relative;
+} 
+.input-group i{
+    position:absolute;
+    color:#700000;
+}
+input:focus{
+    background-color:transparent;
+    outline:transparent;
+    border-bottom:2px solid #940303;
+}
+input::placeholder{
+    color:#d76067;
+}
+label{
+    color:transparent;
+}
+.recover{
+    text-align:right;
+    font-size:0.8rem;
+    margin-bottom:1rem;
+}
+.recover a{
+    text-decoration:none;
+    color: #1b0562;
+}
+.recover a:hover{
+    color:#700000;
+    text-decoration:underline;
+}
+.btn{
+    font-size:1.1rem;
+    padding:10px;
+    border-radius:20px; 
+    outline:none;
+    border:none;
+    width:100%;
+    background:#ac0d17 ;
+    color:white;
+    cursor:pointer;
+    transition:0.2s;
+}
+.btn:hover{
+    background:rgb(238, 70, 70);
+}
+.icons{
+    text-align:center;
+    padding:15px;
+}
+.icons i{
+    color:#99020c;
+    padding:0.7rem;
+    border-radius: 7px;
+    font-size:1.3rem;
+   cursor:pointer;
+   border:2px solid black;
+   margin:6px;
+   transition:0.2s;
+}
+.icons i:hover{
+    background:#f59b9e;
+    font-size:1.2rem;
+    border:2px solid #cb010d;
+}
+.links{
+    display: flex;
+    justify-content:space-around;
+    padding: 0 4rem;
+    margin-top: 0.7rem;
+    font-weight:bold;
+}
+button{
+    color:#fff;
+    border:2px solid rgb(196, 17, 17);
+    padding:0.2rem;
+    border-radius:6px;
+    background-color:#cb010d;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+button:hover{
+    color:black;
+}
