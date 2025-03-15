@@ -155,16 +155,6 @@ ul li a {
     left: 100%;
     top: 0;
 }
-
-/* تصحيح القائمة الفرعية */
-ul li ul.dropdown {
-    width: 100%;
-    background: #D3D3D3;
-    position: absolute;
-    z-index: 999;
-    display: none;
-}
-
 ul li ul.dropdown li {
     display: block;
 }
