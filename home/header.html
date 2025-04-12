@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>header</title>
+</head>
+<body>
+  <style>
+ .search-container {
+  position: relative;
+  width: auto; /* ما يحتاج مساحة كبيرة */
+  margin-left: 10px; /* تصغير المسافة بينه وبين الأيقونات */
+}
+
+.search-container input {
+  width: 140px; /* عرض أصغر */
+  padding: 4px 8px; /* حشو أخف */
+  font-size: 13px; /* حجم خط أصغر */
+  height: 30px; /* تصغير الارتفاع */
+  border: 1px solid #e0c9c9;
+  border-radius: 4px;
+}
+
+  </style>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo">Parfumista<span>.</span></a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Perfumes">Perfumes</a></li>
+                <li class="dropdown">
+                    <a href="#Categories">Categories</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown">
+                            <a href="#">By type</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="floral.php">Floral Perfumes</a></li>
+                                <li><a href="Fruity.php">Fruity Perfumes</a></li>
+                                <li><a href="Oriental.php">Oriental Perfumes</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">The best</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="best-selling.php">Best-selling</a></li>
+                                <li><a href="trending.php">Trending Perfumes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="cont/concte03.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+          
+            <a href="#" class="fas fa-shopping-cart "></a>
+            <a href="تسجيل/signup.html">
+                <i class="fas fa-user"></i>
+            </a>
+            
+            <div class="search-container">
+              <input type="text" id="mainSearchInput" placeholder="ابحث عن عطر...">
+              <div id="searchResults" class="search-results"></div>
+          </div>
+        </div>
+    </header>
+</body>
+</html>
