@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('') no-repeat center center;
+    background-size: cover;
+}
+
+/* البطاقة - خلفية ديور */
+.contact-container {
+    background: url('') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* العناوين */
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+/* النموذج */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* الحقول */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* التصنيفات */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* الإدخالات */
+input, textarea {
+    padding: 10px;
+    border: 1px solid #800007;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* مربع النص */
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* الزر */
+button {
+    padding: 12px;
+    background: #800007;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* تأثير عند تمرير الماوس */
+button:hover {
+    background: #800000;
+}
+    </style>
+
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Write your message..." required></textarea>
+            </div>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
