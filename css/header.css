@@ -1,0 +1,114 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    display: flex;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #800007;
+    font-family:'PlayfairDisplay';
+    font-weight: bolder;
+}
+header .logo span{
+    color: var(--red);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color:#800007;
+}
+.navbar a{
+    margin: 0 15px;
+    font-size: 18px;
+
+}
+header .navbar a:hover{
+    color:#600006;
+}
+ul {
+    list-style: none;
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #600006;
+    text-decoration: none;
+    font-size: 18px; /* تغيير الحجم حسب رغبتك */
+}
+
+/* القوائم المنسدلة */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    background: white;
+    color: #800007;
+    display: block;
+    font-size: 13px !important;
+}
+
+/* إظهار القائمة عند التمرير */
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* جعل القوائم الفرعية تظهر إلى اليمين */
+.dropdown-menu .dropdown-menu {
+    left: 100%;
+    top: 0;
+}
+ul li ul.dropdown li {
+    display: block;
+}
+header .icons a{
+    font-size: 1.8rem;
+    color: var(--red);
+    margin-left: 1.5rem;
+}
+header .icons a:hover{
+    color:#600006;
+}
+header #toggler{
+    display: none;
+}
+/*زر القائمة الجانبية للشاشات الصغيرة*/
+header .fa-bars{
+    font-size: 3rem;
+    color: white;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgb(0,0,0,.3);
+    display: none;
+}

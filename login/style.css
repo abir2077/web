@@ -1,0 +1,95 @@
+/* تعيين الخلفية البيضاء */
+body {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* صندوق تسجيل الدخول والتسجيل */
+.login-box, .signup-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+/* الحقول النصية */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* زر تسجيل الدخول والتسجيل */
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #800007;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #660006;
+}
+
+/* أيقونات تسجيل الدخول الاجتماعي */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    font-size: 20px;
+    color: #800007;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.facebook {
+    color: #1877f2; /* لون Facebook */
+}
+
+.google {
+    color: #db4437; /* لون Google */
+}
+
+
+/* روابط النصوص */
+p a {
+    color: #800007;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;700&family=Poppins:wght@300;400;600&display=swap") ;
+@font-face {
+font-family: '29LT Zarid Display';
+src: url('fonts/Playfair Display.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+h3{
+font-weight: bold;
+color:#600005; 
+}
+:root{
+--red:#800007;
+}
+*{
+margin: 0; 
+padding: 0;
+box-sizing: border-box;
+font-family: '29LT-Zarid-Display',serif;
+outline: none; 
+border: none;
+text-decoration: none;
+transition: .2s linear;
+}
+html{
+font-size: 62.5%;
+scroll-behavior: smooth;
+scroll-padding-top: 6rem;
+overflow-x: hidden;
+}
+section{
+padding: 2rem 9%;
+}
+.heading{
+text-align: center;
+font-size: 4rem;
+color: black;
+padding: 1rem;
+margin: 5rem 0;
+background: rgb(255, 51, 153,.05);
+}
+.sub-heading {
+    text-align: center;
+    font-size: 30px; /* قريب من h1 */
+    font-weight: bold;
+    color: #b10040; /* نفس لون كلمة Perfumes في العنوان */
+    margin: 20px 0;
+    font-family: 'Cairo', sans-serif;
+    text-transform: capitalize;
+    background: linear-gradient(to right, #fbe6ee, #fbe6ee); 
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+.home-heading{
+margin: 8rem 0;
+margin-bottom: 50px;
+}
+.heading span{
+color: var(--red);
+}
+.btn{
+display: inline-block;
+margin-top: 1rem;
+border-radius: 0px;
+background: #800007;
+color: white;
+padding:.9rem 3.5rem ;
+cursor: pointer;
+font-size: 1.7rem;
+}
+.btn:hover{
+background: #600006;
+
+}
+
+
+/* المسؤولة عن home*/
+.Home{
+display: flex;
+align-items: center;
+min-height: 100vh;
+background: url(100.png) no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+.Home .content{
+max-width: 50rem;
+}
+.Home .content h3{
+font-size: 5rem;
+color: #800007;
+font-family:"29LT-Zarid-Display" ;
+}
+.Home .content span{
+font-size: 2.5rem;
+color: var(--red);
+padding: 1rem 0;
+line-height: 1.5;
+}
+.Home .content P{
+font-size: 1.5rem;
+color: #800007;
+padding: 1rem 0;
+line-height: 1.5;
+}
+
+
+
+/* قسم تصميم الايقونات*/
+.icons-container{
+background: #eee;
+display: flex;
+flex-wrap: wrap;
+gap: 1.5rem;
+padding-top:5rem;
+padding-bottom: 5rem;
+}
+.icons-container .icons{
+background: #fff;
+border: 1rem solid rgba(0, 0, 0,.1);
+padding: 2rem;
+display: flex;
+align-items: center;
+flex: 1 1 25rem;
+}
+.icons-container .icons img{
+height: 5rem;
+margin-right: 2rem;
+}
+.icons-container .icons h3{
+color: black;
+padding-bottom: .5rem;
+font-size: 2.5rem;
+
+}
+.icons-container .icons span{
+color: #600006;
+font-size: 1.3rem;
+
+}
+/*القسم الخاص بالمنتوجات*/
+.Perfumes .box-container{
+display: flex;
+flex-wrap: wrap;
+gap: 1.5rem;
+}
+.Perfumes-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 كروت في كل سطر */
+  gap: 20px;
+  padding: 20px;
+}
+
+.Perfumes .box-container .box{
+flex: 1 1 30rem;
+box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+border-radius: .5rem;
+border: .1rem solid rgba(0, 0, 0,.1);
+position:relative ;
+}
+.Perfumes .box-container .box .discount{
+position: absolute;
+top: 1rem; left: 1rem;
+padding: .7rem 1rem;
+font-size: 2rem;
+color: var(--red);
+background: rgba(255, 51, 153, .05);
+z-index: 1;
+border-radius: .5rem;
+}
+.Perfumes .box-container .box .image{
+position: relative;
+text-align: center;
+padding-top: 2rem;
+overflow: hidden;
+}
+.Perfumes .box-container .box .image img{
+
+height: 15rem;
+}
+.Perfumes .box-container .box:hover .image img{
+transform: scale(1.1);
+
+}
+.Perfumes .box-container .box .image .icons{
+position: absolute;
+bottom: 0; left: 0; right: 0;
+display: flex;
+}
+.Perfumes .box-container .box:hover .image .icons{
+bottom: 0;
+}
+.Perfumes .box-container .box .image .icons a{
+height: 5rem;
+line-height: 5rem;
+font-size: 2rem;
+width: 50%;
+background:var(--red);
+color: #fff;
+
+}
+.Perfumes .box-container .box .image .icons .cart-btn{
+border-left: .1rem solid #fff7;
+border-right: .1rem solid #fff7;
+width: 100%;
+}
+.Perfumes .box-container .box .image .icons a:hover{
+background: #333;
+}
+
+
+
+/* صندوق المنتج */
+.Perfumes-box {
+width: 220px;  /* حجم الصندوق */
+border: none;
+border-radius: 0;
+overflow: hidden;
+text-align: center;
+box-shadow: none;
+background: none;
+padding: 0;
+margin: 0;/*جعل المنتج في المنتصف مع مسافة حوله*/
+}
+
+/* تصغير الصورة */
+.Perfumes-image {
+width: 100%;
+height: auto;
+border-radius: 12px;
+display: block;
+margin: 0 auto;
+}
+/* تنسيق نصوص المنتج */
+.Perfumes-details h3 {
+font-size: 18px;
+margin: 10px 0;
+color: #800007;
+}
+
+.image img{
+width: 100%;
+border-radius: 8px;
+}
+.actions {
+background-color: #800007; 
+padding: 10px;
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.actions .icons{
+display: flex;
+gap: 10px;
+}
+.actions .icons i{
+color: white;
+font-size: 18px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.price {
+font-size: 16px;
+font-weight: bold;
+color: #800007; /* لون السعر */
+}
+
+
+
+.buy-button:hover {
+background-color: #600006;
+}
+.cart-btn {
+color: white; 
+background-color: var(--red); /* لون الخلفية كما هو */
+padding: 0.5rem 1.5rem;
+border-radius: 5rem;
+font-size: 1.5rem;
+display: inline-block;
+text-align: center;
+}
+
+
+.discount-badge {
+position: absolute;
+top: 10px;
+left: 10px;
+background-color: rgba(255, 182, 193, 0.8); /* لون وردي شفاف */
+color: #800007; /* لون النص */
+padding: 4px 8px;
+font-size: 12px;
+font-weight: bold;
+border-radius: 10px;
+box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+z-index: 10;
+}
+
+
+
+
+/*تاثير */
+.Perfumes-box:hover .Perfumes-image {
+transform: scale(1.05);
+transition: transform 0.3s ease-in-out;
+}
+.Perfumes-box {
+display: flex;
+justify-content: center;
+width: 100%;
+}
+.Perfumes-card {
+width: 250px;
+display: flex;
+flex-direction: column;
+position: relative;
+background: white;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 15px;
+text-align: center;
+transition: transform 0.3s ease-in-out;
+}
+.Perfumes-card:hover {
+transform: scale(1.05); /* تكبير بسيط عند تمرير الفأرة */
+z-index: 10;
+}
+
+.Perfumes-card img {
+max-width: 100%;
+height: 250px;
+object-fit: cover;
+border-radius: 10px ;
+
+}
+.actions {
+display: flex;
+justify-content: space-between;
+margin-top: 10px;
+}
+h1 {
+font-family: 'CustomSerif', serif;
+}
+
+p, a, button {
+font-family: 'CustomSans', sans-serif;
+}
+
+.container {
+display: flex;
+flex-wrap: wrap;
+overflow: visible;
+}
+
+
+.Perfumes .pro .cart{
+width: 40px;
+height: 40px;
+line-height: 40px;
+border-radius: 50px;
+background-color: #e8f6ea;
+font-weight: 500;
+color: #800007;
+}
+
+
+
+.Perfumes-card {
+position: relative;
+width: 250px;
+background: white;
+border-radius: 10px;
+padding-bottom: 15px;
+overflow: hidden;
+text-align: center;
+
+}
+
+.discount {
+position: absolute;
+top: 10px;
+left: 10px;
+background: #ffcccc;
+color: #800007;
+padding: 5px 8px;
+font-size: 12px;
+border-radius: 3px;
+}
+
+.image-container {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+border-radius: 10px;
+}
+
+.Perfumes-image {
+width: 100%;
+border-radius: 10px;
+display: block;
+}
+
+.Perfumes-details{
+padding-top: 10px;
+}
+
+.icons-overlay {
+position: absolute;
+top: 10px;
+right: 10px;
+display: flex;
+gap: 8px;
+}
+
+.cart-icon {
+position: absolute;
+bottom: 10px;
+left: 10px;
+background-color: transparent ; /* إزالة أي لون خلفية */
+background: transparent ; /* إزالة أي تأثيرات خلفية */
+border: none ; /* إزالة الحدود */
+box-shadow: none ; /* إزالة الظل */
+padding: 0 ; /* إزالة أي فراغ داخلي */
+border-radius: 0 ; /* جعل الحواف مستقيمة */
+display: flex;
+align-items: center;
+gap: 5px;
+font-size: 14px;
+color: black;
+cursor: pointer;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+.cart-icon span{
+    background: var(--red);
+    color: #800007;
+    border-radius: 50%;
+    width: 15px;
+    height: 50px;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    position: absolute;
+}
+
+
+.image-container:hover .cart-icon {
+opacity: 1; /* إظهار العربة عند تمرير الماوس */
+}
+
+.cart-icon i {
+font-size: 18px;
+}
+
+
+.Perfumes-info {
+margin-top: 10px;
+}
+
+.add-to-cart {
+position: absolute;
+top: 10px;
+left: 10px;
+background: none;
+color: #800007;
+border: none;
+padding: 8px;
+width: 100%;
+cursor: pointer;
+font-size: 12px;
+border-radius: 5px;
+}
+
+
+.price {
+font-size: 16px;
+color: #800007;
+font-weight: bold;
+margin-top: 5px;
+}
+
+.Perfumes-name {
+font-weight: bold;
+color: gray;
+font-size: 14px;
+margin-top: 10px;
+}
+
+.rating {
+color: gold;
+font-size: 14px;
+margin-top: 5px;
+}
+
+.Perfumes-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 كروت في كل سطر */
+  gap: 20px;
+  padding: 20px;
+}
+
