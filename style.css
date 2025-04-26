@@ -1,0 +1,844 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;700&family=Poppins:wght@300;400;600&display=swap") ;
+@font-face {
+    font-family: '29LT Zarid Display';
+    src: url('fonts/Playfair Display.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h3{
+    font-weight: bold;
+    color:#600005; 
+}
+
+
+:root{
+    --red:#800007;
+
+}
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '29LT-Zarid-Display',serif;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+html{
+font-size: 62.5%;
+scroll-behavior: smooth;
+scroll-padding-top: 6rem;
+overflow-x: hidden;
+}
+section{
+    padding: 2rem 9%;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: black;
+    padding: 1rem;
+    margin: 5rem 0;
+    background: rgb(255, 51, 153,.05);
+}
+.home-heading{
+    margin: 8rem 0;
+    margin-bottom: 50px;
+}
+.heading span{
+    color: var(--red);
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 0px;
+    background: #800007;
+    color: #800007;
+    padding:.9rem 3.5rem ;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background: #600006;
+
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    display: flex;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #800007;
+    font-family:'PlayfairDisplay';
+    font-weight: bolder;
+}
+header .logo span{
+    color: var(--red);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color:#800007;
+}
+.navbar a{
+    margin: 0 15px;
+    font-size: 18px;
+
+}
+header .navbar a:hover{
+    color:#600006;
+}
+ul {
+    list-style: none;
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #600006;
+    text-decoration: none;
+    font-size: 18px; /* تغيير الحجم حسب رغبتك */
+}
+
+/* القوائم المنسدلة */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    background: white;
+    color: #800007;
+    display: block;
+    font-size: 13px !important;
+}
+
+/* إظهار القائمة عند التمرير */
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* جعل القوائم الفرعية تظهر إلى اليمين */
+.dropdown-menu .dropdown-menu {
+    left: 100%;
+    top: 0;
+}
+ul li ul.dropdown li {
+    display: block;
+}
+
+
+
+
+
+header .icons a{
+    font-size: 1.8rem;
+    color: var(--red);
+    margin-left: 1.5rem;
+}
+header .icons a:hover{
+    color:#600006;
+}
+header #toggler{
+    display: none;
+}
+/*زر القائمة الجانبية للشاشات الصغيرة*/
+header .fa-bars{
+    font-size: 3rem;
+    color: white;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgb(0,0,0,.3);
+    display: none;
+
+}
+
+/* المسؤولة عن home*/
+.Home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/العطور/100.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.Home .content{
+    max-width: 50rem;
+}
+.Home .content h3{
+    font-size: 5rem;
+    color: #800007;
+    font-family:"29LT-Zarid-Display" ;
+}
+.Home .content span{
+    font-size: 2.5rem;
+    color: var(--red);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.Home .content P{
+    font-size: 1.5rem;
+    color: #800007;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+
+/* المسؤولة عن about */
+.About .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+
+}
+.About .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+.About .row .video-container video{
+    width: 100%;
+    border: 1.5em solid #fff;
+    border-radius: .5rem;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+.About .row .content{
+    flex: 1 1 40rem;
+}
+.About .row .content h3{
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+}
+.About .row .content p{
+    font-size: 1.5rem;
+    color: black;
+    padding: 5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+/* قسم تصميم الايقونات*/
+
+.icons-container{
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top:5rem;
+    padding-bottom: 5rem;
+}
+.icons-container .icons{
+    background: #fff;
+    border: 1rem solid rgba(0, 0, 0,.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+.icons-container .icons img{
+    height: 5rem;
+    margin-right: 2rem;
+}
+.icons-container .icons h3{
+    color: black;
+    padding-bottom: .5rem;
+    font-size: 2.5rem;
+
+}
+.icons-container .icons span{
+    color: #600006;
+    font-size: 1.3rem;
+    
+}
+
+
+/*التعامل مع الشاشات الصغيرة*/
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+        }
+        header{
+            padding: 2rem;
+        }
+        section{
+            padding: 2rem;
+        }
+        .Home{
+            background-position:left ;
+        }
+}
+
+
+/*القسم الخاص بالمنتوجات*/
+.Perfumes .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.Perfumes-container {
+    display: flex;
+    gap: 20px; /* المسافة بين الصور */
+}
+.Perfumes .box-container .box{
+   flex: 1 1 30rem;
+   box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+   border-radius: .5rem;
+   border: .1rem solid rgba(0, 0, 0,.1);
+   position:relative ;
+}
+.Perfumes .box-container .box .discount{
+    position: absolute;
+    top: 1rem; left: 1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color: var(--red);
+    background: rgba(255, 51, 153, .05);
+    z-index: 1;
+    border-radius: .5rem;
+}
+.Perfumes .box-container .box .image{
+   position: relative;
+   text-align: center;
+   padding-top: 2rem;
+   overflow: hidden;
+}
+.Perfumes .box-container .box .image img{
+
+    height: 15rem;
+}
+.Perfumes .box-container .box:hover .image img{
+    transform: scale(1.1);
+
+}
+.Perfumes .box-container .box .image .icons{
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    display: flex;
+}
+.Perfumes .box-container .box:hover .image .icons{
+bottom: 0;
+}
+.Perfumes .box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background:var(--red);
+    color: #fff;
+
+}
+.Perfumes .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width: 100%;
+}
+.Perfumes .box-container .box .image .icons a:hover{
+    background: #333;
+}
+
+
+
+/* صندوق المنتج */
+.Perfumes-box {
+    width: 220px;  /* حجم الصندوق */
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: none;
+    background: none;
+    padding: 0;
+    margin: 0;/*جعل المنتج في المنتصف مع مسافة حوله*/
+}
+
+/* تصغير الصورة */
+.Perfumes-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+/* تنسيق نصوص المنتج */
+.Perfumes-details h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #800007;
+}
+
+.image img{
+    width: 100%;
+    border-radius: 8px;
+}
+.actions {
+    background-color: #800007; 
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.actions .icons{
+    display: flex;
+    gap: 10px;
+}
+.actions .icons i{
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #800007; /* لون السعر */
+}
+
+
+
+.buy-button:hover {
+    background-color: #600006;
+}
+.cart-btn {
+    color: white; 
+    background-color: var(--red); /* لون الخلفية كما هو */
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 182, 193, 0.8); /* لون وردي شفاف */
+    color: #800007; /* لون النص */
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+
+
+
+/*تاثير */
+.Perfumes-box:hover .Perfumes-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+   
+.Perfumes-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+
+
+.Perfumes-card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Perfumes-card:hover {
+    transform: scale(1.05); /* تكبير بسيط عند تمرير الفأرة */
+    z-index: 10;
+}
+
+.Perfumes-card img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px ;
+
+}
+
+
+
+
+
+
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+        }
+        header{
+            padding: 2rem;
+        }
+        .heading{
+            font-size: 3rem;
+        }
+}
+
+
+
+h1 {
+    font-family: 'CustomSerif', serif;
+}
+
+p, a, button {
+    font-family: 'CustomSans', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+
+
+.Perfumes .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #800007;
+}
+
+
+
+.Perfumes-card {
+    position: relative;
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+.discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ffcccc;
+    color: #800007;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.Perfumes-image {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.Perfumes-details{
+    padding-top: 10px;
+}
+
+.icons-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+
+
+
+.cart-icon {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: transparent ; /* إزالة أي لون خلفية */
+    background: transparent ; /* إزالة أي تأثيرات خلفية */
+    border: none ; /* إزالة الحدود */
+    box-shadow: none ; /* إزالة الظل */
+    padding: 0 ; /* إزالة أي فراغ داخلي */
+    border-radius: 0 ; /* جعل الحواف مستقيمة */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .cart-icon {
+    opacity: 1; /* إظهار العربة عند تمرير الماوس */
+}
+
+.cart-icon i {
+    font-size: 18px;
+}
+
+
+.Perfumes-info {
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    color: #800007;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+
+.price {
+    font-size: 16px;
+    color: #800007;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.Perfumes-name {
+    font-weight: bold;
+    color: gray;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.rating {
+    color: gold;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.Perfumes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* تباعد بين العناصر */
+    justify-items: space-between;
+}
+
+
+
+
+
+
+    
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+/* تصميم أفقي للبطاقة */
+.product-card {
+    width: 700px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    gap: 40px;
+  }
+
+  /* الصورة على اليسار */
+  .product-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* محتوى النص على اليمين */
+  .product-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* الاسم في الأعلى على اليمين (منتصف رأسي) */
+  .product-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #800007;
+    margin: 120;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    text-align: right;
+    margin-bottom: 40px;
+  }
+
+  /* السعر تحت الاسم */
+  .product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #800007;
+    margin: 80px 0 0 0;
+    text-align: center;
+  }
+
+  /* الوصف تحت السعر */
+  .product-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin: 20px 0 0 0;
+    text-align: left;
+  }
+
+  /* زر الشراء */
+  .cart-btn {
+    background-color: #800007;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-top: 30px;
+    align-self: flex-end;
+  }
+
+  .cart-btn:hover {
+    background-color: #600006;
+    transform: scale(1.02);
+  }
+
+  /* الخط الفاصل */
+  .divider {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+    margin: 20px 0;
+  }
+
+  /* خلفية مظللة */
+  .preview-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 99;
+  }
+
+  /* نافذة المعاينة */
+  .product-preview {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 100;
+  }
+
+  .product-preview img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 25px;
+    color: #900;
+    cursor: pointer;
+  }
+
+  .stars i {
+    color: gold;
+  }
