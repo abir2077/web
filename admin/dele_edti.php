@@ -1,13 +1,14 @@
 <?php
-include('connt.php');  // تأكد من صحة مسار الاتصال بقاعدة البيانات
+include('../connt.php');
 
 // عملية حذف المنتج
 if (isset($_GET['delete_id'])) {
-    $id = $_GET['delete_id'];
+    $id = intval($_GET['delete_id']); // حماية ضد SQL Injection
     $query = "DELETE FROM products WHERE id='$id'";
     $delete = mysqli_query($conn, $query);
     if ($delete) {
-        echo '<script>alert("تم الحذف بنجاح");</script>';
+        echo '<script>alert("تم الحذف بنجاح"); window.location.href="dele_edti.php";</script>';
+        exit();
     } else {
         echo '<script>alert("فشل في الحذف");</script>';
     }
@@ -46,7 +47,7 @@ if (isset($_GET['delete_id'])) {
             padding: 1.2rem;
             text-align: center;
             border-bottom: 1px solid #eee;
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
 
         th {
@@ -96,19 +97,34 @@ if (isset($_GET['delete_id'])) {
     </style>
 </head>
 <body>
+<a href="dashboard.php" style="text-decoration: none;">
+    <button style="
+        background-color: #800007;
+        color: white;
+        padding: 6px 14px;
+        font-size: 0.9rem;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    " onmouseover="this.style.backgroundColor='#a30012'; this.style.transform='scale(1.05)'" 
+       onmouseout="this.style.backgroundColor='#800007'; this.style.transform='scale(1)'">
+        ← Back
+    </button>
+</a>
     <div class="sidebar_container">
         <table>
             <thead>
                 <tr>
-                    <th>رقم المنتج</th>
-                    <th>صورة المنتج</th>
-                    <th>عنوان المنتج</th>
-                    <th>سعر المنتج</th>
-                    <th>توفر المنتج</th>
-                    <th>الأقسام</th>
-                    <th>تفاصيل المنتج</th>
-                    <th>حذف المنتج</th>
-                    <th>تعديل المنتج</th>
+                    <th>Product number</th>
+                    <th>Product Image</th>
+                    <th>Product Title</th>
+                    <th>Product price</th>
+                    <th>Categories</th>
+                    <th>Product details</th>
+                    <th>Delete product</th>
+                    <th>Modify  product</th>
                 </tr>
             </thead>
             <tbody>
@@ -119,20 +135,19 @@ if (isset($_GET['delete_id'])) {
                 ?>
                 <tr>
                     <td><?= $row['id']; ?></td>
-                    <td><img src="العطور/<?= $row['image']; ?>" alt="صورة المنتج"></td>
+                    <td><img src="../parfum/<?= $row['image']; ?>" alt="صورة المنتج"></td>
                     <td><?= $row['name']; ?></td>
                     <td><?= $row['price']; ?> DZ</td>
-                    <td><?= isset($row['availability']) ? $row['availability'] : 'غير محدد'; ?></td>
                     <td><?= $row['category']; ?></td>
-                    <td><a href="dele_edti.php?id=<?= $row['id']; ?>">عرض التفاصيل</a></td>
+                    <td><a href="dele_edti.php?id=<?= $row['id']; ?>">details</a></td>
                     <td>
                         <a href="dele_edti.php?delete_id=<?= $row['id']; ?>" onclick="return confirm('هل أنت متأكد من حذف المنتج؟');">
-                            <button class="btn-delete">حذف المنتج</button>
+                            <button class="btn-delete">Delete product </button>
                         </a>
                     </td>
                     <td>
                         <a href="dele_edti.php?id=<?= $row['id']; ?>">
-                            <button class="btn-edit">تعديل المنتج</button>
+                            <button class="btn-edit">Modify  product</button>
                         </a>
                     </td>
                 </tr>

@@ -1,20 +1,18 @@
 <?php
-include('connt.php');
+include('../connt.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $description = $_POST['description'];
-    $price = $_POST['price'];
-    $category = $_POST['category'];
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $description = mysqli_real_escape_string($conn, $_POST['description']);
+    $price = floatval($_POST['price']);
+    $category = mysqli_real_escape_string($conn, $_POST['category']);
 
     if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
         $imageName = $_FILES['image']['name'];
         $imageTmp = $_FILES['image']['tmp_name'];
-
-        // اسم مميز لتجنب تكرار الصور
         $ext = pathinfo($imageName, PATHINFO_EXTENSION);
         $uniqueName = uniqid('img_', true) . '.' . $ext;
-        $uploadPath = "العطور/" . $uniqueName;
+        $uploadPath = "../parfum/" . $uniqueName;
 
         if (move_uploaded_file($imageTmp, $uploadPath)) {
             $sql = "INSERT INTO products (name, image, description, price, category) 
@@ -35,10 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>إضافة منتج</title>
+    <title>Add product</title>
     <style>
         body {
             font-family: 'Cairo', sans-serif;
@@ -121,27 +119,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
+<a href="dashboard.php" style="text-decoration: none;">
+    <button style="
+        background-color: #800007;
+        color: white;
+        padding: 6px 14px;
+        font-size: 0.9rem;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    " onmouseover="this.style.backgroundColor='#a30012'; this.style.transform='scale(1.05)'" 
+       onmouseout="this.style.backgroundColor='#800007'; this.style.transform='scale(1)'">
+        ← Back
+    </button>
+</a>
+
 <form action="insert_pro.php" method="POST" enctype="multipart/form-data">
-    <label>اسم المنتج:</label>
+    <label>Name product:</label>
     <input type="text" name="name" required>
 
-    <label for="image">صورة المنتج:</label>
+    <label for="image">image product:</label>
     <input type="file" name="image" id="image" required>
 
     <label>الوصف:</label>
     <textarea name="description" rows="4" required></textarea>
 
-    <label>السعر:</label>
+    <label>price:</label>
     <input type="text" name="price" required>
 
-    <label>النوع:</label>
+    <label>type:</label>
     <select name="category" required>
         <option value="floral">Floral Perfumes</option>
         <option value="fruity">Fruity Perfumes</option>
         <option value="oriental">Oriental Perfumes</option>
-    </select>
-
-    <button type="submit">إضافة المنتج</button>
+        <option value="best">Best selling</option>
+        <option value="trend">Trending Perfumes</option>
+    </select><button type="submit">Add product</button>
 </form>
 
 </body>

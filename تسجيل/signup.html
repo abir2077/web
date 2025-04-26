@@ -12,12 +12,15 @@
         <div class="signup-box">
             <h2>Sign Up</h2>
 
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="E-mail">
-            <input type="password" placeholder="Password">
-            <input type="password" placeholder="Confirm Password">
+            <!-- ✅ إضافة الفورم ليرسل البيانات إلى signup.php -->
+            <form action="signup.php" method="POST">
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
 
-            <button class="btn">Sign Up</button>
+                <button class="btn" type="submit">Sign Up</button>
+            </form>
 
             <p>Or sign up with</p>
             <div class="social-icons">
@@ -25,7 +28,7 @@
                 <a href="#" class="icon google"><i class="fa-brands fa-google"></i></a>
             </div>
             
-            <p>Already have an account? <a href="index.html">Sign in</a></p>
+            <p>Already have an account? <a href="signin.html">Sign in</a></p>
         </div>
     </div>
 </body>
